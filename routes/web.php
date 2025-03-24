@@ -10,3 +10,6 @@ Route::get('/', function () {
 
 route::resource('/', TaskController::class)->only(['index','create', 'store']);
 
+// routes/web.php
+Route::get('email/verify/{id}/{hash}', 'VerificationController@verify')->name('verification.verify');
+

@@ -7,22 +7,10 @@
             <h2>Crear Tarea</h2>
         </div>
         <div>
-            <a href="{{route('tasks.index')}}" class="btn btn-primary">Volver</a>
+            <a href="{{route('index')}}" class="btn btn-primary">Volver</a>
         </div>
     </div>
-        
-    @endsession)
-    @if ($errors->any())
-        <div class="alert alert-danger mt-2">
-            <strong>Error!</strong> Algo fue mal..<br><br>
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{route('tasks.store')}}" method="POST">
+    <form action="{{route('store')}}" method="POST">
         @csrf
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
@@ -55,7 +43,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
-                <button type="submit" class="btn btn-primary">Crear</button>
+                <a href="{{ route('index')}}" type="submit" class="btn btn-primary">Crear</a>
             </div>
         </div>
     </form>

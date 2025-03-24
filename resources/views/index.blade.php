@@ -8,18 +8,9 @@
             <h2 class="text-white">CRUD de Tareas</h2>
         </div>
         <div>
-            <a href="" class="btn btn-primary">Crear tarea</a>
+            <a href="{{ route('create')}}" class="btn btn-primary">Crear tarea</a>
         </div>
     </div>
-
-    @if (session::get('success'))
-        <div class="alert alert-danger mt-2">
-            <strong>Error!</strong> Algo fue mal..<br><br>
-        <div>
-
-    
-    @enif
-
     <div class="col-12 mt-4">
         <table class="table table-bordered text-white">
             <tr class="text-secondary">

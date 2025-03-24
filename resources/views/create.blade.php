@@ -16,25 +16,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                 <div class="form-group">
                     <strong>Tarea:</strong>
-                    <input type="text" name="title" class="form-control" placeholder="Tarea" >
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Tarea" >
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mt-2">
                 <div class="form-group">
                     <strong>Descripción:</strong>
-                    <textarea class="form-control" style="height:150px" name="description" placeholder="Descripción..."></textarea>
+                    <textarea class="form-control" style="height:150px" name="description" id="description" placeholder="Descripción..."></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 mt-2">
                 <div class="form-group">
                     <strong>Fecha límite:</strong>
-                    <input type="date" name="due_date" class="form-control" id="">
+                    <input type="date" name="due_data" id="due_data" class="form-control">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 mt-2">
                 <div class="form-group">
                     <strong>Estado (inicial):</strong>
-                    <select name="status" class="form-select" id="">
+                    <select name="status" class="form-select" id="status">
                         <option value="">-- Elige el status --</option>
                         <option value="Pendiente">Pendiente</option>
                         <option value="En progreso">En progreso</option>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-2">
-                <a href="{{ route('index')}}" type="submit" class="btn btn-primary">Crear</a>
+                <button type="submit" class="btn btn-primary">Crear</button>
             </div>
         </div>
     </form>

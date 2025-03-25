@@ -24,10 +24,12 @@ class TaskController extends Controller
         return redirect()->route('index')->with('success', 'Tarea creada correctamente.');
     }
 
-    public function edit(Task $task)
+    public function edit($id)
     {
+        $task = Task::findOrFail($id);
         return view('edit', compact('task'));
     }
+    
 
     public function update($id, Request $request)
     {

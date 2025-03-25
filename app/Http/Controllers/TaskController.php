@@ -29,18 +29,22 @@ class TaskController extends Controller
         return view('edit', compact('task'));
     }
 
-    public function update(Request $request, Task $task)
+    public function update($id, Request $request)
     {
+        $task = Task::findOrFail($id);
         $task->update([
             'status' => $request->input('status')
         ]);
-        
+
         return redirect()->route('index')->with('success', 'Tarea actualizada correctamente.');
     }
 
-    public function destroy(Task $task)
+    public function destroy($id)
     {
+        $task = Task::findOrFail($id);
         $task->delete();
+    
         return redirect()->route('index')->with('success', 'Tarea eliminada correctamente.');
     }
+    
 }
